@@ -1,0 +1,156 @@
+:root {
+  --primary-pink: rgb(247, 66, 95);
+  --soft-peach: #FFD5CD;
+  --cream-bg: #FFF8F7;
+  --dark-matte: #1a1a1a;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Montserrat', sans-serif; background: var(--cream-bg); scroll-behavior: smooth; color: var(--dark-matte); }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+/* Top Bar */
+.top-bar { background: var(--dark-matte); color: var(--soft-peach); padding: 10px 0; font-size: 12px; font-weight: bold; letter-spacing: 1px; }
+.dot { height: 5px; width: 5px; background: var(--primary-pink); border-radius: 50%; display: inline-block; margin: 0 10px; }
+
+/* Header */
+.header { background: white; padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(247, 66, 95, 0.1); border-bottom: 2px solid var(--soft-peach); }
+.logo-box { display: flex; align-items: center; }
+.logo { width: 55px; margin-right: 15px; border-radius: 50%; border: 2px solid var(--primary-pink); }
+.logo-text h1 { font-family: 'Oswald'; color: var(--primary-pink); font-size: 28px; line-height: 1; }
+.logo-text span { font-size: 10px; color: var(--dark-matte); font-weight: bold; letter-spacing: 1px; }
+
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: var(--dark-matte); font-weight: 700; font-size: 14px; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary-pink); }
+.nav-cta { background: var(--primary-pink); color: white !important; padding: 10px 25px; border-radius: 50px; transition: 0.3s; }
+.nav-cta:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(247, 66, 95, 0.3); }
+
+/* --- HERO SECTION (Updated to Pink Overlay) --- */
+.hero { 
+  height: 85vh; 
+  background: url('https://images.unsplash.com/photo-1557597774-9d2739f85a76?q=80&w=2000') center/cover no-repeat;
+  display: flex; align-items: center; text-align: center; position: relative; color: white;
+}
+.hero-overlay { 
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+  background: linear-gradient(to bottom, rgba(247, 66, 95, 0.7), rgba(26, 26, 26, 0.8)); 
+}
+.hero-content { position: relative; z-index: 2; }
+.hero h1 { font-family: 'Oswald'; font-size: 65px; line-height: 1.1; margin-bottom: 20px; }
+.cute-tag { background: white; color: var(--primary-pink); padding: 0 15px; border-radius: 10px; display: inline-block; }
+
+.btn-main { background: white; color: var(--primary-pink); padding: 15px 35px; text-decoration: none; font-weight: bold; display: inline-block; margin-right: 10px; border-radius: 50px; transition: 0.3s; }
+.btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.btn-outline { border: 2px solid white; color: white; padding: 13px 35px; text-decoration: none; font-weight: bold; display: inline-block; border-radius: 50px; }
+
+/* Services */
+.services { padding: 80px 0; background: white; text-align: center; }
+.section-title { font-family: 'Oswald'; font-size: 40px; text-transform: uppercase; margin-bottom: 40px; color: var(--dark-matte); }
+.tag { color: var(--primary-pink); font-weight: bold; letter-spacing: 2px; font-size: 12px; }
+.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.service-card { background: var(--cream-bg); padding: 40px; border-radius: 20px; border: 1px solid var(--soft-peach); transition: 0.3s; }
+.service-card:hover { border-color: var(--primary-pink); transform: translateY(-10px); }
+.card-num { font-size: 50px; color: var(--soft-peach); font-weight: 900; }
+
+/* Hire Section */
+.hire-section { padding: 80px 0; background: var(--soft-peach); border-radius: 50px 50px 0 0; }
+.hire-wrapper { display: flex; gap: 50px; align-items: center; }
+.text-pink { color: var(--primary-pink); }
+.btn-gold { background: var(--primary-pink); color: white; padding: 18px 35px; text-decoration: none; font-weight: 800; border-radius: 50px; display: inline-block; transition: 0.3s; }
+.btn-gold:hover { background: var(--dark-matte); }
+
+.stat-item { background: white; padding: 30px; text-align: center; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.stat-item .num { font-size: 40px; color: var(--primary-pink); font-weight: 900; display: block; }
+
+/* Gallery */
+.gallery-section { padding: 80px 0; background: var(--dark-matte); color: white; }
+.photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+.photo-item img { width: 100%; height: 280px; object-fit: cover; border-radius: 15px; border: 2px solid transparent; transition: 0.3s; }
+.photo-item img:hover { border-color: var(--primary-pink); transform: scale(1.02); }
+
+/* Careers */
+/* --- CAREERS SECTION (RE-STYLED) --- */
+.careers { 
+  padding: 100px 0; 
+  background: var(--cream-bg); 
+}
+
+.career-wrapper { 
+  display: flex; 
+  gap: 50px; 
+  align-items: flex-start; /* ऊपर से बराबर रखने के लिए */
+}
+
+.career-info { flex: 1; }
+.career-info h2 { 
+  font-family: 'Oswald'; 
+  font-size: 50px; 
+  color: var(--dark-matte); 
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.career-form-box { 
+  flex: 1.2; 
+  background: #ffffff; 
+  padding: 40px; 
+  /* शार्प और प्रोफेशनल लुक के लिए हल्का सा शैडो */
+  box-shadow: 0 20px 40px rgba(247, 66, 95, 0.1); 
+  border-top: 5px solid var(--primary-pink); /* ऊपर एक पतली पिंक लाइन */
+}
+
+/* इनपुट बॉक्स को साफ़ दिखाने के लिए */
+.career-form-box input, 
+.career-form-box select, 
+.career-form-box textarea { 
+  width: 100%; 
+  padding: 15px; 
+  margin-bottom: 20px; 
+  border: 1px solid #e1e1e1; 
+  background: #fdfdfd;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* क्लिक करने पर पिंक बॉर्डर आएगा */
+.career-form-box input:focus, 
+.career-form-box select:focus, 
+.career-form-box textarea:focus { 
+  border-color: var(--primary-pink);
+  background: #fff;
+}
+
+.btn-submit { 
+  background: var(--primary-pink); 
+  color: white; 
+  width: 100%; 
+  padding: 18px; 
+  border: none; 
+  font-weight: 700; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer; 
+  transition: 0.3s;
+}
+
+.btn-submit:hover { 
+  background: var(--dark-matte); 
+  transform: translateY(-2px);
+}
+
+/* मोबाइल के लिए सेटिंग */
+@media (max-width: 768px) {
+  .career-wrapper { flex-direction: column; }
+  .career-info { text-align: center; margin-bottom: 30px; }
+}
+/* WA & Footer */
+.wa-modern { background: #25D366; color: white; padding: 12px 25px; border-radius: 50px; position: fixed; bottom: 30px; right: 30px; display: flex; align-items: center; text-decoration: none; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.footer { background: var(--dark-matte); padding: 50px 0; color: #888; text-align: center; }
+
+@media (max-width: 768px) { .hire-wrapper, .career-wrapper { flex-direction: column; text-align: center; } .nav-links { display: none; } }
